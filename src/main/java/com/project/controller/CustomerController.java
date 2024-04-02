@@ -42,7 +42,7 @@ public class CustomerController {
         return ResponseEntity.ok("Cart is emptied");
     }
 
-    @PutMapping("/empty/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> updateCart(@RequestParam Long id, @RequestBody Cart cart) {
         customerService.updateCart(id, cart);
         return ResponseEntity.ok("Cart is updated");
